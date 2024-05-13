@@ -1,0 +1,463 @@
+/* typo */
+@font-face {
+    font-family: "NotoSansMono";
+    src: url(assets/fonts/NotoSansMono-VariableFont_wdth.ttf) format("opentype");
+}
+
+
+/* global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color-green: #D4EED3;
+    --secondary-color-grey: #97ABB1;
+    --third-color-yellow: #EDEBA0;
+    --fourth-color-darkgray: #746F72;
+    --main-typo: "NotoSansMono";
+}
+
+main {
+    background-color: #746F72;
+    width: 100%;
+    min-width: 200px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--main-typo);
+    font-weight: bold;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+h2,
+h3 {
+    color: var(--main-color-green);
+}
+
+h2 {
+    text-decoration: underline var(--main-color-green);
+}
+
+p,
+li,
+button,
+a {
+    font-family: var(--main-typo);
+    color: black;
+}
+
+/* p,
+button,
+a {
+    font-size: 1em;
+}
+*/
+
+/* header  */
+
+header {
+    background-color: var(--main-color-green);
+    padding: 1em;
+}
+
+#avatar {
+    height: 8em;
+}
+
+#avatartitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 2em;
+
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+}
+
+/* formulaire */
+
+#form {
+    width: 75%;
+}
+
+#label {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.champ {
+    font-family: var(--main-typo);
+    font-weight: bold;
+    text-align: center;
+}
+
+.box,
+#formrep {
+    background-color: var(--secondary-color-grey);
+    border-radius: 1.5rem;
+    height: 5em;
+    width: 10em;
+    max-width: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--main-typo);
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    background-color: var(--main-color-green);
+    border-radius: 0.5em;
+    border: none;
+    width: 8em;
+    height: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+.buttonstart {
+    background-color: var(--third-color-yellow);
+    width: 4em;
+    height: 2em;
+    font-size: 1em;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    gap: 1.5em;
+}
+
+span {
+    color: var(--third-color-yellow);
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.buttontryagain {
+    background-color: var(--third-color-yellow);
+    width: 6em;
+    height: 2em;
+    font-size: 1em;
+    visibility: hidden;
+}
+
+/* Welcome & Result */
+
+
+/* footer */
+footer {
+    background-color: var(--main-color-green);
+}
+
+footer p {
+    margin: auto;
+    text-align: center;
+    padding: 0.5em;
+}
+
+
+
+
+
+
+/*------------------------------------- Section QUIZZ ------------------------------*/
+
+#article {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 80%;
+    gap: 1.5rem;
+}
+
+
+
+
+/* ------------------------------------- Hedgehog PART ------------------------------- */
+
+.button-quizz {
+    background-color: var(--third-color-yellow);
+    border-radius: 2rem;
+    justify-self: center;
+    align-self: center;
+    height: 50%;
+    width: 100%;
+}
+
+
+.goodanswer {
+    background-color: #689D71;
+    border: none;
+}
+
+.badanswer {
+    background-color: #B3575C;
+    border: none;
+}
+
+
+
+.button-quizz {
+    background-color: var(--third-color-yellow);
+    border-radius: 2rem;
+    justify-self: center;
+    align-self: center;
+    height: 50%;
+    width: 100%;
+}
+
+
+.goodanswer {
+    background-color: #689D71;
+    border: none;
+}
+
+.badanswer {
+    background-color: #B3575C;
+    border: none;
+}
+
+
+
+#article>#hedgehog {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 0;
+    grid-area: 1/1/2/2;
+}
+
+#article>#hedgehog>.quizz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 2rem;
+    gap: 1.5rem;
+}
+
+#article>#hedgehog>.quizz>h4 {
+    color: var(--main-color-green);
+    font-size: 1rem;
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    background-color: var(--secondary-color-grey);
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    width: 80%;
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog>#audio-hedgehog {
+    grid-area: 1/2/2/4;
+    max-width: 80%;
+    justify-self: center;
+    align-self: center;
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog>button {
+    justify-self: center;
+    align-self: center;
+    height: 50%;
+    width: 100%;
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog>#answer-hedgehog {
+    grid-area: 2/2/3/3;
+
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog>#answer-squirrel {
+    grid-area: 2/3/3/4;
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog>#answer-beaver {
+    grid-area: 3/2/4/3;
+}
+
+#article>#hedgehog>.quizz>#quizz-hedgehog>#answer-hamster {
+    grid-area: 3/3/4/4;
+}
+
+
+
+
+#article>#hedgehog>#description-hedgehog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    background-color: var(--secondary-color-grey);
+    border-radius: 0.5rem;
+    align-self: center;
+    height: 10rem;
+}
+
+#article>#hedgehog>#description-hedgehog>#img-hedgehog {
+    width: auto;
+    height: 5rem;
+    padding: 0.25rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#article>#hedgehog>#description-hedgehog>ul {
+    list-style-type: none;
+    font-size: 0.5rem;
+    max-width: 40%;
+}
+
+#article>#hedgehog>#description-hedgehog>ul>li {
+    padding: 0.25rem;
+}
+
+#article>#hedgehog>#description-hedgehog>ul>li>p {
+    font-size: 0.5rem;
+}
+
+#article>#hedgehog>#description-hedgehog {
+    display: none;
+}
+
+
+#description-hedgehog>ul>li>p {
+    font-size: 0.5rem;
+
+}
+
+/* ------------------- MEDIA QUERIES ----------------------- */
+
+
+@media screen and (min-width: 992px) {
+    .result {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 5em;
+    }
+
+    /* global */
+
+    #formrep {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box {
+        display: flex;
+        min-width: 20em;
+    }
+
+    label {
+        min-width: 7.5em;
+        width: 15em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    /* header */
+
+    #avatartitle {
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav li {
+        padding: 1em;
+    }
+
+
+    #avatar {
+        height: 11em;
+    }
+
+    /*--------------modification pour compléter le code--------------*/
+
+
+    #article>#hedgehog {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    #article>#hedgehog>#description-hedgehog>ul>li>p {
+        font-size: 0.7rem;
+    }
+
+
+
+}
+
+/*-----modif about us*/
+#header>#nav>ul>#button>li {
+    background-color: #b629a1;
+}
